@@ -1,0 +1,108 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar .";
+}
+
+.sidebar {
+  color: white;
+  padding: 1.3rem;
+  background-color: #0ea5e9;
+  grid-area: sidebar;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 3rem;
+  align-content: start;
+}
+
+.options > span,
+.title > span,
+.top-part > span {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.title {
+  align-self: start;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.settings1,
+.settings2 {
+  display: grid;
+  row-gap: 16px;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  column-gap: 35px;
+}
+
+.header {
+  box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.2);
+  padding: 1.3rem;
+  display: grid;
+  grid-area: header;
+  align-content: start;
+}
+
+.top-part {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: auto 1fr auto auto auto;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+input[type="search"] {
+  max-width: min(300rem, 80%);
+  border-radius: 30px;
+  background-color: #cbd5e1;
+  border: none;
+}
+
+.bottom-part {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-name {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: #0ea5e9;
+  border-radius: 30px;
+  padding: 10px 30px;
+  border: none;
+}
