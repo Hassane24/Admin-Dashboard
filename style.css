@@ -256,3 +256,15 @@ span.person {
   color: black;
   font-weight: 500;
 }
+
+button:hover {
+  cursor: pointer;
+  background-color: #1e40af;
+  transform: scale(107%);
+  transition: all 0.3s;
+}
+.project:hover {
+  cursor: pointer;
+  transform: scale(105%);
+  transition: ease-in-out 0.2s;
+}
